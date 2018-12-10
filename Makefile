@@ -20,9 +20,13 @@ NO_Au_efld	: main_NO_Au_efld.o NO_Au_Diabats.o $(OBJS)
 	$(CXX) $^ $(LDLIBS) -o $@
 	mv *.o obj
 NO_Au_cme 	: main_NO_Au_cme.o NO_Au_Diabats.o $(OBJS)
+	mkdir -p obj
 	$(CXX) $^ $(LDLIBS) -o $@
+	mv *.o obj
 NO_Au_test 	: test_NO_Au.o NO_Au_Diabats.o $(OBJS)
+	mkdir -p obj
 	$(CXX) $^ $(LDLIBS) -o $@
+	mv *.o obj
 
 JOIN_TREE 	= join.h join.tpp aux.h aux.tpp
 ALL_AUX_TREE 	= auxmath.h auxmath.tpp $(JOIN_TREE) mathconst.h

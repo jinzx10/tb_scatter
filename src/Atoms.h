@@ -1,6 +1,8 @@
 #ifndef __ATOMS_H__
 #define __ATOMS_H__
 
+// to be renamed: Site
+
 #include <armadillo>
 #include <vector>
 
